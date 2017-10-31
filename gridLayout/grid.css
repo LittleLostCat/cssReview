@@ -1,0 +1,174 @@
+*{
+	padding:0;
+	margin: 0;
+}
+.wrapper{
+	display: grid;
+	width: 800px;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows:1fr 1fr;
+	/*grid-column-gap:1px;
+	grid-row-gap:1px;*/
+	grid-gap:1px;
+	background-color: black;
+}
+.letter{
+	background-color: #0069b3;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	padding: 100px;
+	font-size: 70px;
+	color: white;
+	line-height: 1;
+	font-weight: 200;
+	cursor: pointer;
+	transition:all .3 ease;
+}
+
+
+/*.wrapper1 { 
+	display: grid; 
+	grid-template-columns: 100px 10px 100px 10px 100px; 
+	grid-template-rows: auto 10px auto; 
+} 
+.box { 
+	background-color: #444; 
+	color: #fff; 
+	font-size: 150%; 
+	padding: 20px; 
+} 
+.b,.d,.g,.i { 
+	background-color:red; 
+} */
+
+
+
+.wrapper1{ 
+	display: grid; 
+	grid-template-columns: 100px 10px 100px 10px 100px 10px 100px; 
+	grid-template-rows: auto 10px auto 10px auto; 
+} 
+.box { 
+	background-color: #444; 
+	color: #fff; 
+	font-size: 150%; 
+	padding: 20px; 
+	text-align: center; 
+} 
+.a{ 
+	grid-column-start: 1;
+	grid-column-end: 2; 
+	grid-row-start: 1; 
+	grid-row-end: 2; 
+	/*grid-column: 1 / 2; grid-row: 1 / 2;*/
+	/*grid-area: 1 / 2 / 1 / 2;*/
+} 
+.b { 
+	grid-column-start: 3; 
+	grid-column-end: 4;
+    grid-row-start: 1; 
+    grid-row-end: 2; 
+} 
+.c { 
+	grid-column-start: 5; 
+	grid-column-end: 6; 
+	grid-row-start: 1; 
+	grid-row-end: 2; 
+} 
+.d { 
+	grid-column-start: 7; 
+	grid-column-end: 8; 
+	grid-row-start: 1; 
+	grid-row-end: 2; 
+} 
+.e { 
+	grid-column-start: 1; 
+	grid-column-end: 2; 
+	grid-row-start: 3; 
+	grid-row-end: 4; 
+} 
+.f { 
+	grid-column-start: 3; 
+	grid-column-end: 4; 
+	grid-row-start: 3; 
+	grid-row-end: 4; 
+} 
+.g { 
+	grid-column-start: 5; 
+	grid-column-end: 6; 
+	grid-row-start: 3; 
+	grid-row-end: 4; 
+} 
+.h { 
+	grid-column-start: 7; 
+	grid-column-end: 8; 
+	grid-row-start: 3; 
+	grid-row-end: 4; 
+} 
+.i { 
+	grid-column-start: 1; 
+	grid-column-end: 2; 
+	grid-row-start: 5; 
+	grid-row-end: 6; 
+} 
+.j { 
+	grid-column-start: 3; 
+	grid-column-end: 4; 
+	grid-row-start: 5; 
+	grid-row-end: 6; 
+} 
+
+/*.box{
+	flex-direction: row | row-reverse | column | column-reverse;主轴方向
+	flex-wrap: nowrap | wrap | wrap-reverse;轴线排满时是否换行
+	flex-flow: <flex-direction> || <flex-wrap>;
+	justify-content: flex-start | flex-end | center | space-between | space-around;主轴对齐方式
+	align-items: flex-start | flex-end | center | baseline | stretch;轴线项目的对齐方式
+	align-content: flex-start | flex-end | center | space-between | space-around | stretch;多根轴线的对齐方式
+}
+.item{
+  	order: <integer>;项目的排列顺序
+  	flex-grow: <number>; 项目的放大比例，默认为0
+  	flex-shrink: <number>; 项目的缩小比例，默认为1
+  	flex-basis: <length> | auto;定义在分配多余空间之前，项目占据的主轴空间;
+  	flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]默认值为0 1 auto
+  	align-self: auto | flex-start | flex-end | center | baseline | stretch;允许单个项目有与其他项目不一样的对齐方式
+
+}
+
+}
+*/
+.box1 {
+	display: flex;
+	width: 60px;
+	height: 60px;
+	border-radius: 8px;
+	border: 1px solid black;
+	margin-left: 20px;    
+	justify-content: center;
+  	align-items: center;
+}
+.item{
+	width:16px;
+	height: 16px;
+	border-radius:50%;
+	background-color: black; 
+}
+
+.box2 {
+	display: flex;
+	width: 60px;
+	height: 60px;
+	border-radius: 8px;
+	border: 1px solid black;
+	margin-left: 20px;    
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
