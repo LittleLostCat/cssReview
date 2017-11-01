@@ -1,0 +1,11 @@
+.form-group *:focus { 
+	background: yellow; 
+	color: #000; 
+} 
+.form-group { 
+	padding: 10px; 
+	border: 3px solid transparent 
+} 
+.form-group:focus-within { 
+	border-color: #000; 
+}
