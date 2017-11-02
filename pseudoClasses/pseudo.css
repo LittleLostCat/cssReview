@@ -6,6 +6,10 @@
 	padding: 10px; 
 	border: 3px solid transparent 
 } 
+/*focus-within其子类获得焦点时也能显示*/
 .form-group:focus-within { 
 	border-color: #000; 
+}
+.nav:focus{
+	color:red;
 }

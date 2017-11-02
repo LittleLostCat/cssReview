@@ -10,5 +10,16 @@
 		<label for="email"> Your email: </label> 
 		<input type="email" name="email" id="email" placeholder="Enter your email address"/> 
 	</div>
+	<a href="" class="nav">1111</a>
+	<input id="iptTest" type="button" value="test">
 </body>
-</html>
+<script src='addEventListener.js'></script>
+<script>
+	var ipt = document.getElementById("iptTest");
+	ipt.addEventListener("click",clickme);
+	function clickme(e){
+
+		console.log(this)
+	}
+</script>
+</html> 
