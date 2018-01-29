@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		display: inline-block;
+	}
+	.fill-available{
+		width:-webkit-fill-available;
+		min-height: 10px;
+		background: blue;
+	}
+	.max-content{
+		width:-webkit-max-content;
+		width:max-content;
+		background: red;
+	}
+	.min-content{
+		width:-webkit-min-content;
+		width:min-content;
+	}
+	.fit-content{
+		width:-webkit-fit-content;
+		width:fit-content;
+		margin: 0 auto;
+	}
+	.fill-available{
+		width:-webkit-fill-available;
+		background: blue;
+	}
+	.text{
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+	}
+	.border{
+		border: 1px dotted blue;
+		background: yellow;
+	}
+	.border1{
+		border: 1px dotted blue;
+		background: green;
+	}
+</style>
+<body>
+	<div class='fill-available'></div><!-- 与块级元素游览器中默认 -->
+	<br/>
+	<div class='fill-available'>
+		<div>CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。Grid布局是第一个专门为解决布局问题而创建的CSS模块,2012年11月06日成立草案。
+		初步了解和浏览器支持使用Grid布局非常简单，你只需要给容器（container）定义：display:grid，并设置列（grid-template-columns）和 行（grid-template-rows）的大小，然后用grid-column和grid-row定义容器子元素（grid-item项目）的位置。与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！好东西总是来的晚，不要焦躁，不要沮丧。活好每一天，自然就等到了。目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。如果你想体验Grid布局的强大，推荐使用开通过“体验新功能”的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入chrome://flags，找到"experimental web platform features"，启用并重启浏览器；Opera：输入opera://flags，与Chrome一样；Firefox:输入layout.css.grid.enabled。
+		</div>
+		<div class='max-content'>CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。Grid布局是第一个专门为解决布局问题而创建的CSS模块,2012年11月06日成立草案。
+		初步了解和浏览器支持使用Grid布局非常简单，你只需要给容器（container）定义：display:grid，并设置列（grid-template-columns）和 行（grid-template-rows）的大小，然后用grid-column和grid-row定义容器子元素（grid-item项目）的位置。与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！好东西总是来的晚，不要焦躁，不要沮丧。活好每一天，自然就等到了。目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。如果你想体验Grid布局的强大，推荐使用开通过“体验新功能”的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入chrome://flags，找到"experimental web platform features"，启用并重启浏览器；Opera：输入opera://flags，与Chrome一样；Firefox:输入layout.css.grid.enabled。
+		</div>
+	</div>
+	<br/>
+	<div>
+		<div class='border'>
+			<div class="text"></div>
+			<br/>
+			<div>这里的文字有多长，父节点的宽度也会跟文字的宽度相呼应，而设置了min-content之后，则是会根据内部宽度值最大的那一个进行排列</div>
+		</div>
+		<br/>
+		<div class='border min-content'>
+			<div class="text"></div>
+			<br/>
+			<div>这里的文字有多长，父节点的宽度也会跟文字的宽度相呼应，而设置了min-content之后，则是会根据内部宽度值最大的那一个进行排列</div>
+		</div>
+	</div>
+	<br/>
+	<div class='border1 fit-content'>
+		<div class="text"></div>
+	</div>
+</body>
+</html>
